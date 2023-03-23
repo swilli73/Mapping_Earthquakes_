@@ -35,24 +35,6 @@ L.control.layers(baseMaps).addTo(map);
 // Then we add our 'graymap' tile layer to the map.
 streets.addTo(map);
 
-// let myStyle = {
-//   fillColor: "yellow",
-//   color: "blue",
-//   weight: 1
-// }
-
-// // Grabbing our GeoJSON data.
-// d3.json(torontoHoods).then(function(data) {
-//   console.log(data);
-//   // Creating a GeoJSON layer with the retrieved data.
-//   L.geoJSON(data, {
-//     style: myStyle,
-//     onEachFeature: function(feature,layer) {
-//       layer.bindPopup("<h2> Neighborhood: " + feature.properties.AREA_NAME + "</h2>")
-//     }
-//   }).addTo(map);
-// });
-
 // Retrieve the earthquake GeoJSON data.
 d3.json("https://earthquake.usgs.gov/earthquakes/feed/v1.0/summary/all_week.geojson").then(function(data) {
   function styleInfo(feature) {
